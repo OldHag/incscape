@@ -2,48 +2,46 @@
 <html>
     <head>
         <title>ClickScape</title>
-        <style type="text/css">
-    
-        </style>
+        <link rel="stylesheet" type="text/css" href="style.css">
         <script src="incr.js"></script>
     </head>
     <body onload="rTin();rCopper();rBronze();rMiningLevel();">
-        <div id="container" style="width: 100%">
-            <div id="main" style="width: 90%">
-                <div id="Tital" style="text-align: center;">
-                    <h1>ClickScape</h1>
-                </div>
-                <div id="tinDiv" style="width: 50%;float: left;text-align: center;">
-                    <button type="button" onclick="mineTin()">Mine Tin</button>
-                    <p id="Tinamm">something went wrong</p>
-                </div>
-                <div id="copperDiv" style="width: 50%;float: left;text-align: center;">
-                    <button type="button" onclick="mineCopper()">Mine Copper</button>
-                    <p id="Copperamm">something went wrong</p>
-                </div>
-                <div id="smeltDiv">
-                    <div id="recipe" style="width: 25%;float: left;text-align: center;">
-                    <p>Tin: 1 Copper: 1</p>
-                
-                    </div>
-                    <div id="smeltItems" style="width: 25%; float: left;text-align: right;">
-                    <p id="Bronzeamm">something went wrong</p>
-                
-                    </div>
-                    <div id="recipeButton" style="width: 50%;float: left;text-align: center;">
-                        <button type="button" onclick="smeltBronze()">Smelt Bronze</button>
-		
-                    </div>
-                </div>
-            </div>
-            <div id="sidebar" style="width: 10%; float: left">
-                <!--<div id="config" style="text-align: center;">
-                    <p>Display xp? <input type="radio" name="xp" value="xp" id="xp"></p>
-                </div>-->
-                <div id="level" style="text-align: right;">
-                    <p id="mininglvl">something went wrong</p>
-                </div>
-            </div>
+        <div id="space" style="width: 10%; float:left">
+            <br />
+        </div>
+        <div id="container" style="width: 80%; float: left">
+			<div id="title" style="width: 100%;float: left">
+				<h1 style="text-align: center;">ClickScape</h1>
+			</div>
+			<div id="buttons" style="width: 50%;float: left">
+			<table style="width: 100%">
+				<tr>
+					<td><p style="font-size: 1.3em; text-align: center">Mining</p></td>
+				<tr>
+				<tr>
+					<td class="button"><button onmousedown="mineTin()">Mine Tin</button>Tin: <span id="Tinamm">0</span></td>
+				</tr>
+				<tr>
+					<td class="button"><button onmousedown="mineCopper()">Mine Tin</button>Copper: <span id="Copperamm">0</span></td>
+				</tr>
+			</table>
+			<table style="width: 100%">
+				<tr>
+					<td><p style="font-size: 1.3em; text-align: center">Smithing</p></td>
+				</tr>
+				<tr>
+					<td class="button"><button onmousedown="smeltBronze()">Smelt Bronze</button>Bronze: <span id="Bronzeamm">0</span></td>
+				</tr>
+			</table>
+			</div>
+			<div id="xp" style="width: 50%;float: left; text-align: center;">
+				<br />
+				<p style="font-size: 1.3em">Mining Level <span id="mininglvl">1</span></p>
+				<p style="font-size: 1.3em">Smithing Level <span id="smithinglvl">1</span></p>
+			</div>
+		</div>
+        <div id="space" style="width: 10%; float:left">
+            <br />
         </div>
     </body>
-</html> 
+</html>
