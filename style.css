@@ -1,8 +1,3 @@
-.ore {
-    width: 50%;
-    float: left;
-    text-align: center;   
-}
 body {
     background-color: #ac8e65
 }
@@ -14,7 +9,4 @@ button{
 	padding:0.1em;
 	font-size:1.0em;
 	font-weight:500;
-}
-.space {
-    background-color: #ffffff
 }
