@@ -1,47 +1,63 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>ClickScape</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="incr.js"></script>
-    </head>
-    <body onload="rTin();rCopper();rBronze();rMiningLevel();">
-        <div id="space" style="width: 10%; float:left">
-            <br />
-        </div>
-        <div id="container" style="width: 80%; float: left">
-			<div id="title" style="width: 100%;float: left">
-				<h1 style="text-align: center;">ClickScape</h1>
-			</div>
-			<div id="buttons" style="width: 50%;float: left">
-			<table style="width: 100%">
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="jv.js"></script>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#minedivbut").click(function(){
+                $("#smelt").hide();
+                $("#mine").show();
+            });
+            $("#smeltdivbut").click(function(){
+                $("#mine").hide();
+                $("#smelt").show();
+            });
+        });
+</script>
+</head>
+<body onload="rTin();rCopper();rBronze();rMiningLevel();">
+    <div id="container" style="width: 100%;">
+        <div id="fpart" style="width: 50%">
+            <div id="ftop" style="width 100%">
+                <p id="fbuttons"><span id="minedivbut">Mining</span> <span id="smeltdivbut">Smelting</span>
+            </div>
+            <div id="mine" style="width: 100%; display: none;">
+                <table style="width: 100%">
 				<tr>
 					<td><p style="font-size: 1.3em; text-align: center">Mining</p></td>
+                    <td><p style="font-size: 1.3em">Mining Level <span id="mininglvl">1</span></p></td>
 				<tr>
 				<tr>
 					<td class="button"><button onmousedown="mineTin()">Mine Tin</button>Tin: <span id="Tinamm">0</span></td>
 				</tr>
 				<tr>
-					<td class="button"><button onmousedown="mineCopper()">Mine Tin</button>Copper: <span id="Copperamm">0</span></td>
+					<td class="button"><button onmousedown="mineCopper()">Mine Copper</button>Copper: <span id="Copperamm">0</span></td>
 				</tr>
 			</table>
-			<table style="width: 100%">
+            </div>
+            <div id="smelt" style="width: 100%; display: none;">
+                <table style="width: 100%">
 				<tr>
 					<td><p style="font-size: 1.3em; text-align: center">Smithing</p></td>
+                    <td><p style="font-size: 1.3em">Smithing Level <span id="smithinglvl">1</span></p></td>
 				</tr>
 				<tr>
 					<td class="button"><button onmousedown="smeltBronze()">Smelt Bronze</button>Bronze: <span id="Bronzeamm">0</span></td>
 				</tr>
 			</table>
-			</div>
-			<div id="xp" style="width: 50%;float: left; text-align: center;">
-				<br />
-				<p style="font-size: 1.3em">Mining Level <span id="mininglvl">1</span></p>
-				<p style="font-size: 1.3em">Smithing Level <span id="smithinglvl">1</span></p>
-			</div>
-		</div>
-        <div id="space" style="width: 10%; float:left">
-            <br />
+            </div>
         </div>
-    </body>
+        <div id="spart" style="width: 50%">
+        
+        </div>
+    </div>
+</body>
 </html>
+
+
+
+<!-- [url=http://craftpimp.com][img]http://topg.org/premium/368757_4823.gif[/img][/url]
+[img]http://www.danasoft.com/sig/urinternetsrmine.jpg[/img]
+[url=http://www.katawa-shoujo.com/][img]http://dl.katawa-shoujo.com/pr/banner/ks_banner.jpg[/img][/url] -->
