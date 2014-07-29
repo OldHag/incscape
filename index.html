@@ -3,7 +3,7 @@
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="jv.js"></script>
-    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="jquery.js"></script>
     <script>
         $(document).ready(function(){
             $("#minedivbut").click(function(){
@@ -17,25 +17,41 @@
         });
 </script>
 </head>
-<body onload="rTin();rCopper();rBronze();rMiningLevel();">
+<body>
     <div id="container" style="width: 100%;">
-        <div id="fpart" style="width: 50%">
+        <div id="title" style="width: 100%;text-align: center;"><p>ClickScape</p></div>
+        <div id="fpart" style="width: 100%">
             <div id="ftop" style="width 100%">
                 <p id="fbuttons"><span id="minedivbut">Mining</span> <span id="smeltdivbut">Smelting</span>
             </div>
             <div id="mine" style="width: 100%; display: none;">
                 <table style="width: 100%">
-				<tr>
-					<td><p style="font-size: 1.3em; text-align: center">Mining</p></td>
-                    <td><p style="font-size: 1.3em">Mining Level <span id="mininglvl">1</span></p></td>
-				<tr>
-				<tr>
-					<td class="button"><button onmousedown="mineTin()">Mine Tin</button>Tin: <span id="Tinamm">0</span></td>
-				</tr>
-				<tr>
-					<td class="button"><button onmousedown="mineCopper()">Mine Copper</button>Copper: <span id="Copperamm">0</span></td>
-				</tr>
-			</table>
+				    <tr>
+					    <td><p style="font-size: 1.3em; text-align: center">Mining</p></td>
+                        <td><p style="font-size: 1.3em">Mining Level <span id="mininglvl">1</span></p></td>
+				    <tr>
+				    <tr>
+					    <td class="button"><button onmousedown="mineTin()">Mine Tin</button>Tin: <span id="Tinamm">0</span></td>
+				    </tr>
+				    <tr>
+					    <td class="button"><button onmousedown="mineCopper()">Mine Copper</button>Copper: <span id="Copperamm">0</span></td>
+				    </tr>
+                    <tr>
+                        <td class="button"><button onmousedown="mineClay()">Mine Clay</button>Clay: <span id="Clayamm">0</span></td>
+                    </tr>
+                    <tr>
+                        <td class="button"><button onmousedown="mineRessence()">Mine Rune Essence</button>Rune Essence: <span id="Ressenceamm">0</span></td>
+                    </tr>
+                    <tr>
+                        <td class="button"><button onmousedown="mineIron()">Mine Iron</button>Iron: <span id="Ironamm">0</span></td>
+                    </tr>
+                    <tr>
+                        <td class="button"><button onmousedown="mineCoal()">Mine Coal</button>Coal: <span id="Coalamm">0</span></td>
+                    </tr>
+                    <tr>
+                        <td class="button"><button onmousedown="minePessence()">Mine Pessence</button>Pessence: <span id="Pessenceamm">0</span></td>
+                    </tr>
+			    </table>
             </div>
             <div id="smelt" style="width: 100%; display: none;">
                 <table style="width: 100%">
@@ -46,11 +62,28 @@
 				<tr>
 					<td class="button"><button onmousedown="smeltBronze()">Smelt Bronze</button>Bronze: <span id="Bronzeamm">0</span></td>
 				</tr>
+                <tr>
+					<td class="button"><button onmousedown="smeltIron()">Smelt Iron</button>Iron: <span id="Ironbamm">0</span></td>
+				</tr>
+                <tr>
+					<td class="button"><button onmousedown="smeltSteel()">Smelt Steel</button>Steel: <span id="Steelamm">0</span></td>
+				</tr>
+			</table>
+            </div>
+            <div id="runecraft" style="width: 100%; display: none;">
+                <table style="width: 100%">
+				<tr>
+					<td><p style="font-size: 1.3em; text-align: center">Rune Crafting</p></td>
+                    <td><p style="font-size: 1.3em">Rune Crafting Level <span id="runecraftlvl">1</span></p></td>
+				</tr>
+				<tr>
+					<td class="button"><button onmousedown="smeltBronze()">Smelt Bronze</button>Bronze: <span id="Bronzeamm">0</span></td>
+				</tr>
 			</table>
             </div>
         </div>
         <div id="spart" style="width: 50%">
-        
+
         </div>
     </div>
 </body>
